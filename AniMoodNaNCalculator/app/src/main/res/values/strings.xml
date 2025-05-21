@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">AniMood</string>
+    <string name="app_text">My Anime Mood</string>
+    <string name="info">Info</string>
+    <string name="clear">Clear</string>
+    <string name="match">Match</string>
+    <string name="plus_sign">+</string>
+    <string name="emoji_info_icon">More about this emoji</string>
+    <string name="emoji1">🥲</string>
+    <string name="emoji2">😂</string>
+    <string name="emoji3">😡</string>
+    <string name="emoji4">😎</string>
+    <string name="emoji5">🥺</string>
+    <string name="emoji6">😱</string>
+    <string name="emoji7">😍</string>
+    <string name="emoji8">😴</string>
+    <string name="emoji9">🤯</string>
+    <string name="emoji10">😈</string>
+    <string name="emoji11">🤠</string>
+    <string name="emoji12">🤧</string>
+    <string name="instructions_title">Instructions</string>
+    <string name="welcome_text">Welcome to Animood</string>
+    <string name="instruction_1">Choose two emojis that reflect your current feelings</string>
+    <string name="instruction_2">Every unique pair reveals a hand-picked anime tailored to your vibe and energy</string>
+    <string name="instruction_3">Do not select the same emoji twice</string>
+    <string name="instruction_4">Choose with your heart and let the anime find you</string>
+    <string name="close">Close</string>
+
+
+</resources>

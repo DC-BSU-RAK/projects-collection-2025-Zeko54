@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="28dp"
+        android:gravity="center_horizontal"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/MotivationTitle"
+            android:fontFamily="@font/b612_mono"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_blue_dark"
+            android:paddingBottom="20dp"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_border"
+            android:padding="18dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="24dp"
+            android:elevation="4dp">
+
+            <TextView
+                android:id="@+id/quoteText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/MotivationQuote"
+                android:fontFamily="@font/anta"
+                android:textStyle="italic"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:paddingBottom="8dp"/>
+            <Button
+                android:id="@+id/btnNextQuote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/MotivationBtn"
+                android:fontFamily="@font/anta"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="64dp"
+            android:layout_height="3dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginBottom="18dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_border"
+            android:padding="20dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="18dp"
+            android:elevation="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/SuggestionsTitle"
+                android:fontFamily="@font/anta"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:textColor="@android:color/holo_green_dark"
+                android:paddingBottom="5dp"/>
+
+            <TextView
+                android:id="@+id/tryTodayText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/SuggestionsText"
+                android:fontFamily="@font/anta"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_border"
+            android:padding="20dp"
+            android:orientation="vertical"
+            android:elevation="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/CardTitle"
+                android:fontFamily="@font/anta"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:paddingBottom="6dp"/>
+            <TextView
+                android:id="@+id/suggestionsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/CardText"
+                android:fontFamily="@font/anta"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="30dp"
+            android:paddingBottom="24dp"
+            android:text="@string/MotivationText"
+            android:fontFamily="@font/anta"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            tools:ignore="TextContrastCheck" />
+    </LinearLayout>
+</LinearLayout>

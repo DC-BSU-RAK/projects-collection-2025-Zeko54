@@ -1,0 +1,46 @@
+<resources>
+    <!-- Splash Screen -->
+    <string name="app_name">Habit Tracker</string>
+    <string name="app_tagline">Track your habits. Build your life.</string>
+
+    <!-- Main Screen -->
+    <string name="app_title">My Habits</string>
+
+    <!--Single Habit Items -->
+    <string name="habit_name">Read Book</string>
+    <string name="habit_progress">Streak: 5 days</string>
+
+    <!--Add Habit Dialog-->
+    <string name="popup_title">Add New Habit</string>
+    <string name="input_name">Habit name</string>
+    <string name="button_text">Add Habit</string>
+
+    <!--Habit Details Screen-->
+    <string name="habitDetailStreak">Streak: 0 days</string>
+    <string name="habitDetailGoal">Goal: Do this daily</string>
+    <string name="habitDetailDate">Started: May 20, 2025</string>
+    <string name="habitDetailBtn1">Mark as Done Today</string>
+    <string name="habitDetailNotes">Notes</string>
+    <string name="habitDetailHistory">Completion History: You completed this habit 5 days in May.</string>
+    <string name="habitDetailBtn2">Edit</string>
+    <string name="habitDetailBtn3">Delete</string>
+    <string name="habitDetailMotivation">Keep it up! Every day counts.</string>
+
+    <!--Motivation Screen-->
+    <string name="MotivationTitle">Stay Motivated!</string>
+    <string name="MotivationQuote">Small habits make a big difference.</string>
+    <string name="MotivationBtn">Next Quote</string>
+    <string name="SuggestionsTitle">Try This Today!</string>
+    <string name="SuggestionsText">Take a 10-minute walk in nature.</string>
+    <string name="CardTitle">More Habit Suggestions</string>
+    <string name="CardText">• Drink more water\n• Take a walk daily\n• Practice gratitude\n• Limit screen time\n• Sleep 8 hours</string>
+    <string name="MotivationText">You got this. Every step counts!</string>
+
+    <!--Settings Screen-->
+    <string name="SettingsTitle">Settings</string>
+    <string name="DarkTitle">Enable Dark Mode</string>
+    <string name="NotificationTitle">App Notifications</string>
+    <string name="SupportTitle">Contact Support</string>
+    <string name="AboutTitle">About Habit Tracker</string>
+    <string name="Thanks">Thank you for using Habit Tracker!</string>
+</resources>

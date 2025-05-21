@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This here is the layout of the splash screen, the screen will show briefly when you launch the app.-->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".Splash">
+
+    <!--App logo-->
+    <ImageView
+        android:id="@+id/appLogo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@mipmap/ic_launcher_foreground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.31"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:ignore="ContentDescription" />
+
+    <!--App Name-->
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/b612_mono"
+        android:text="@string/app_name"
+        android:textColor="@android:color/black"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/appTagline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appLogo"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!--App Tagline-->
+    <TextView
+        android:id="@+id/appTagline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/anta"
+        android:text="@string/app_tagline"
+        android:textColor="#5D5757"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.64" />
+</androidx.constraintlayout.widget.ConstraintLayout>

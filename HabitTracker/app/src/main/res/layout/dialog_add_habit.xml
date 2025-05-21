@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This is the dialog layout for add new habit it shows a styled popup which allows you to enter a new habit name.-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dialogRoot"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/card_border"
+    android:elevation="8dp">
+
+    <!--relative layout to position title on left and cross on the right-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--dialog title-->
+        <TextView
+            android:id="@+id/dialogTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/popup_title"
+            android:fontFamily="@font/b612_mono"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:layout_centerVertical="true"
+            tools:ignore="RelativeOverlap" />
+
+        <!--cross icon-->
+        <ImageView
+            android:id="@+id/closeDialog"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/close"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+
+    <!--habit name input field-->
+    <EditText
+        android:id="@+id/editHabitName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:autofillHints=""
+        android:hint="@string/input_name"
+        android:fontFamily="@font/anta"
+        android:inputType="text"
+        android:maxLines="1"
+        android:minHeight="48dp"
+        android:textColorHint="#757575" />
+
+    <!--add button-->
+    <Button
+        android:id="@+id/btnAddHabit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/anta"
+        android:text="@string/button_text"
+        android:layout_marginTop="16dp"/>
+</LinearLayout>
+

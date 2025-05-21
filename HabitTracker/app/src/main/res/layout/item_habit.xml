@@ -1,0 +1,58 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    app:cardCornerRadius="16dp">
+
+        <!--main horizontal Layout for the habit item. the icon is on the left and details on the right-->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_border"
+    android:orientation="horizontal"
+    android:padding="18dp">
+
+        <ImageView
+            android:id="@+id/habitIcon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/icon_circle_bg"
+            android:padding="8dp"
+            android:src="@drawable/bolt"
+            tools:ignore="ContentDescription,ImageContrastCheck" />
+
+
+        <!--vertical layout for habit name and streaks it is to the right of the icon.-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/habitName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/habit_name"
+                    android:fontFamily="@font/b612_mono"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/habitProgress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/anta"
+                    android:text="@string/habit_progress"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="14sp"
+                    tools:ignore="TextContrastCheck" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+
