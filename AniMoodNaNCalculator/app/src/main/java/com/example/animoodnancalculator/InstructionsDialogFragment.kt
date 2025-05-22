@@ -13,10 +13,8 @@ class InstructionsDialogFragment : DialogFragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate your instruction layout
         val view = inflater.inflate(R.layout.activity_instructions, container, false)
 
-        // Find the close/cross button and set click listener
         view.findViewById<ImageView>(R.id.closeBtn)?.setOnClickListener {
             dismiss()
         }
@@ -25,7 +23,6 @@ class InstructionsDialogFragment : DialogFragment() {
 
     override fun onStart() {
         super.onStart()
-        // Make dialog use full card width (optional)
         dialog?.window?.setLayout(
             ViewGroup.LayoutParams.MATCH_PARENT,
             ViewGroup.LayoutParams.WRAP_CONTENT

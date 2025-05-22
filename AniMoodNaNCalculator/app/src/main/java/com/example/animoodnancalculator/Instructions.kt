@@ -19,7 +19,6 @@ class Instructions : AppCompatActivity() {
             insets
         }
 
-        // Find the cross/close button and finish the activity when clicked
         val closeBtn = findViewById<ImageView>(R.id.closeBtn)
         closeBtn.setOnClickListener {
             finish()

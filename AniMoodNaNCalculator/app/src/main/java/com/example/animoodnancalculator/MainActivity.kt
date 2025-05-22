@@ -9,13 +9,11 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import android.content.Intent
 
 class MainActivity : AppCompatActivity() {
 
     data class EmojiInfo(val emoji: String, val label: String, val description: String)
 
-    // List of emoji info (must match your grid order!)
     private val emojis = listOf(
         EmojiInfo("😢", "Sad / Emotional", "Tragic arcs, heavy themes, heartbreak."),
         EmojiInfo("😂", "Funny / Chill", "Laughs, slice of life, light-hearted fun."),
@@ -31,7 +29,6 @@ class MainActivity : AppCompatActivity() {
         EmojiInfo("🤧", "Sick / Drama", "Sad slice of life, illness arcs, emotional rollercoasters.")
     )
 
-    // Track selected emojis (indices)
     private val selectedEmojiIndices = mutableListOf<Int>()
 
         override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,13 +42,11 @@ class MainActivity : AppCompatActivity() {
                 insets
             }
 
-            // Top bar references
             val emoji1 = findViewById<TextView>(R.id.emoji1)
             val emoji2 = findViewById<TextView>(R.id.emoji2)
             val plusSign = findViewById<TextView>(R.id.plusSign)
             val animeResult = findViewById<TextView>(R.id.animeResult)
 
-            // Map button and icon IDs to their views for all 12 emojis
             val emojiButtons = listOf(
                 R.id.emojiBtn1, R.id.emojiBtn2, R.id.emojiBtn3, R.id.emojiBtn4,
                 R.id.emojiBtn5, R.id.emojiBtn6, R.id.emojiBtn7, R.id.emojiBtn8,
@@ -68,16 +63,13 @@ class MainActivity : AppCompatActivity() {
                 R.id.infoIcon9, R.id.infoIcon10, R.id.infoIcon11, R.id.infoIcon12
             )
 
-            // Hook up all emoji buttons and info icons
             for (i in 0 until 12) {
                 val btn = findViewById<android.widget.FrameLayout>(emojiButtons[i])
                 val label = findViewById<TextView>(emojiLabels[i])
                 val info = findViewById<ImageView>(infoIcons[i])
 
-                // Emoji selection
                 btn.setOnClickListener {
                     if (selectedEmojiIndices.contains(i)) {
-                        // Already selected, do nothing (or deselect if you want)
                         Toast.makeText(this, "Already selected!", Toast.LENGTH_SHORT).show()
                         return@setOnClickListener
                     }
@@ -86,10 +78,9 @@ class MainActivity : AppCompatActivity() {
                         return@setOnClickListener
                     }
                     selectedEmojiIndices.add(i)
-                    label.alpha = 0.6f // Dim selected (visual feedback)
+                    label.alpha = 0.6f
                     btn.alpha = 0.7f
 
-                    // Update EmojiBar
                     if (selectedEmojiIndices.size == 1) {
                         emoji1.text = emojis[i].emoji
                     } else if (selectedEmojiIndices.size == 2) {
@@ -97,7 +88,6 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
 
-                // Info icon for meaning
                 info.setOnClickListener {
                     val emojiInfo = emojis[i]
                     val message = "${emojiInfo.emoji}  ${emojiInfo.label}\n\n${emojiInfo.description}"
@@ -110,7 +100,6 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
-            // CLEAR button
             val clearBtn = findViewById<MaterialButton>(R.id.ClearButton)
             clearBtn.setOnClickListener {
                 selectedEmojiIndices.clear()
@@ -119,12 +108,10 @@ class MainActivity : AppCompatActivity() {
                 animeResult.text = ""
                 animeResult.visibility = android.view.View.GONE
 
-                // Restore emoji and plus sign visibility
                 emoji1.visibility = android.view.View.VISIBLE
                 emoji2.visibility = android.view.View.VISIBLE
                 plusSign.visibility = android.view.View.VISIBLE
 
-                // Reset alpha
                 for (i in 0 until 12) {
                     val btn = findViewById<android.widget.FrameLayout>(emojiButtons[i])
                     val label = findViewById<TextView>(emojiLabels[i])
@@ -133,7 +120,6 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
-            // MATCH button (recommendation logic placeholder)
             val matchBtn = findViewById<MaterialButton>(R.id.MatchButton)
             matchBtn.setOnClickListener {
                 if (selectedEmojiIndices.size < 2) {
@@ -144,12 +130,10 @@ class MainActivity : AppCompatActivity() {
                 val idx2 = selectedEmojiIndices[1]
                 val anime = getAnimeRecommendation(idx1, idx2)
 
-                // Hide the emojis and plus sign
                 emoji1.visibility = android.view.View.GONE
                 emoji2.visibility = android.view.View.GONE
                 plusSign.visibility = android.view.View.GONE
 
-                // Show the anime result
                 animeResult.text = anime
                 animeResult.visibility = android.view.View.VISIBLE
             }
@@ -240,7 +224,6 @@ class MainActivity : AppCompatActivity() {
         setOf(10, 11) to "One Piece"
     )
 
-    // Simple anime mapping (replace with your real logic)
     private fun getAnimeRecommendation(idx1: Int, idx2: Int): String {
         val pair = setOf(idx1, idx2)
         val anime = animeMap[pair]

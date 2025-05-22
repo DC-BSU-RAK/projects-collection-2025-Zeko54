@@ -14,7 +14,7 @@ import android.widget.ImageView
 
 
 class Splash : AppCompatActivity() {
-    private val splashTimeout: Long = 3000 // Splash screen timeout in milliseconds
+    private val splashTimeout: Long = 3000
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()

@@ -19,7 +19,6 @@ class Settings : AppCompatActivity() {
 
         sharedPreferences = getSharedPreferences("settings", MODE_PRIVATE)
 
-        // DARK MODE SWITCH
         val darkModeSwitch = findViewById<Switch>(R.id.darkModeSwitch)
         val isDarkMode = sharedPreferences.getBoolean("dark_mode", false)
         darkModeSwitch.isChecked = isDarkMode
@@ -30,7 +29,6 @@ class Settings : AppCompatActivity() {
             sharedPreferences.edit().putBoolean("dark_mode", isChecked).apply()
         }
 
-        // NOTIFICATIONS SWITCH
         val notificationsSwitch = findViewById<Switch>(R.id.notificationsSwitch)
         val isNotificationsOn = sharedPreferences.getBoolean("notifications_on", true)
         notificationsSwitch.isChecked = isNotificationsOn

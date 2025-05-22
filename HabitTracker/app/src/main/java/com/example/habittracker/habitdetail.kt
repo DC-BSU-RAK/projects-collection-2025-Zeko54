@@ -49,7 +49,6 @@ class habitdetail : AppCompatActivity() {
         }
     }
 
-    // Add this to hide the keyboard when touching outside EditText
     override fun dispatchTouchEvent(ev: MotionEvent): Boolean {
         if (currentFocus != null) {
             val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
